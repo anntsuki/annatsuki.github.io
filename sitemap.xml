@@ -187,14 +187,14 @@
   </url>
   
   <url>
-    <loc>https://anntsuki.github.io/tags/technique/</loc>
+    <loc>https://anntsuki.github.io/tags/start/</loc>
     <lastmod>2023-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://anntsuki.github.io/tags/start/</loc>
+    <loc>https://anntsuki.github.io/tags/technique/</loc>
     <lastmod>2023-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -224,20 +224,6 @@
   </url>
   
   <url>
-    <loc>https://anntsuki.github.io/categories/lead/site/</loc>
-    <lastmod>2023-04-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://anntsuki.github.io/categories/lead/site/start/</loc>
-    <lastmod>2023-04-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://anntsuki.github.io/categories/start/</loc>
     <lastmod>2023-04-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -245,7 +231,21 @@
   </url>
   
   <url>
+    <loc>https://anntsuki.github.io/categories/lead/site/</loc>
+    <lastmod>2023-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://anntsuki.github.io/categories/lead/site/collect/</loc>
+    <lastmod>2023-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://anntsuki.github.io/categories/lead/site/start/</loc>
     <lastmod>2023-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
