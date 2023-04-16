@@ -24,7 +24,7 @@ https://anntsuki.github.io/tags/start/
 https://anntsuki.github.io/tags/manage/
 https://anntsuki.github.io/tags/collect/
 https://anntsuki.github.io/categories/lead/
-https://anntsuki.github.io/categories/start/
 https://anntsuki.github.io/categories/lead/site/
-https://anntsuki.github.io/categories/lead/site/collect/
 https://anntsuki.github.io/categories/lead/site/start/
+https://anntsuki.github.io/categories/start/
+https://anntsuki.github.io/categories/lead/site/collect/
