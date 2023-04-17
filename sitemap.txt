@@ -1,3 +1,4 @@
+https://anntsuki.github.io/2023/04/17/picturesource/
 https://anntsuki.github.io/2023/04/15/site-create-lead/
 https://anntsuki.github.io/2023/04/15/webtools/
 https://anntsuki.github.io/2023/04/15/world/
@@ -17,14 +18,14 @@ https://anntsuki.github.io/about/index.html
 https://anntsuki.github.io/essay/index.html
 https://anntsuki.github.io/404.html
 https://anntsuki.github.io/
-https://anntsuki.github.io/tags/technique/
 https://anntsuki.github.io/tags/site/
 https://anntsuki.github.io/tags/lead/
-https://anntsuki.github.io/tags/start/
+https://anntsuki.github.io/tags/technique/
 https://anntsuki.github.io/tags/manage/
 https://anntsuki.github.io/tags/collect/
+https://anntsuki.github.io/tags/start/
 https://anntsuki.github.io/categories/lead/
+https://anntsuki.github.io/categories/start/
 https://anntsuki.github.io/categories/lead/site/
 https://anntsuki.github.io/categories/lead/site/start/
-https://anntsuki.github.io/categories/start/
 https://anntsuki.github.io/categories/lead/site/collect/
