@@ -8,9 +8,21 @@
       <link href="/2023/04/17/picturesource/"/>
       <url>/2023/04/17/picturesource/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<pre><code>现在用的是github加picgo的图床，国外访问行了，但是国内404，我还没找到好方法，先挂这，等我有时间解决好了再说</code></pre>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+            <tag> 网站 </tag>
+            
+            <tag> 技术 </tag>
+            
+            <tag> 图床 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -26,18 +38,22 @@
       
       <categories>
           
-          <category> lead </category>
+          <category> 教程 </category>
           
-          <category> site </category>
+          <category> 网站 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> site </tag>
+            <tag> 教程 </tag>
             
-            <tag> lead </tag>
+            <tag> 网站 </tag>
+            
+            <tag> 技术 </tag>
+            
+            <tag> 谷歌搜录 </tag>
             
         </tags>
       
@@ -55,24 +71,24 @@
       
       <categories>
           
-          <category> lead </category>
+          <category> 教程 </category>
           
-          <category> site </category>
+          <category> 网站 </category>
           
-          <category> collect </category>
+          <category> 配置 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> site </tag>
+            <tag> 教程 </tag>
             
-            <tag> technique </tag>
+            <tag> 网站 </tag>
             
-            <tag> manage </tag>
+            <tag> 技术 </tag>
             
-            <tag> collect </tag>
+            <tag> 合集 </tag>
             
         </tags>
       
@@ -90,22 +106,24 @@
       
       <categories>
           
-          <category> lead </category>
+          <category> 教程 </category>
           
-          <category> site </category>
+          <category> 网站 </category>
           
-          <category> start </category>
+          <category> 开始 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> site </tag>
+            <tag> 教程 </tag>
             
-            <tag> lead </tag>
+            <tag> 网站 </tag>
             
-            <tag> technique </tag>
+            <tag> 技术 </tag>
+            
+            <tag> 网站配置 </tag>
             
         </tags>
       
@@ -118,19 +136,19 @@
       <link href="/2023/04/15/world/"/>
       <url>/2023/04/15/world/</url>
       
-        <content type="html"><![CDATA[<p>hellow world 你好世界</p>]]></content>
+        <content type="html"><![CDATA[<pre><code>hellow world 你好世界</code></pre>]]></content>
       
       
       <categories>
           
-          <category> start </category>
+          <category> 开始 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> start </tag>
+            <tag> 开始 </tag>
             
         </tags>
       

@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://anntsuki.github.io/2023/04/15/googlecounsel/</loc>
+    
+    <lastmod>2023-04-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://anntsuki.github.io/2023/04/15/site-create-lead/</loc>
     
     <lastmod>2023-04-17</lastmod>
@@ -31,16 +40,7 @@
   <url>
     <loc>https://anntsuki.github.io/2023/04/15/world/</loc>
     
-    <lastmod>2023-04-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://anntsuki.github.io/2023/04/15/googlecounsel/</loc>
-    
-    <lastmod>2023-04-15</lastmod>
+    <lastmod>2023-04-17</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -182,42 +182,56 @@
 
   
   <url>
-    <loc>https://anntsuki.github.io/tags/site/</loc>
+    <loc>https://anntsuki.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2023-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://anntsuki.github.io/tags/lead/</loc>
+    <loc>https://anntsuki.github.io/tags/%E7%BD%91%E7%AB%99/</loc>
     <lastmod>2023-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://anntsuki.github.io/tags/technique/</loc>
+    <loc>https://anntsuki.github.io/tags/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2023-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://anntsuki.github.io/tags/manage/</loc>
+    <loc>https://anntsuki.github.io/tags/%E5%9B%BE%E5%BA%8A/</loc>
     <lastmod>2023-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://anntsuki.github.io/tags/collect/</loc>
+    <loc>https://anntsuki.github.io/tags/%E8%B0%B7%E6%AD%8C%E6%90%9C%E5%BD%95/</loc>
     <lastmod>2023-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://anntsuki.github.io/tags/start/</loc>
+    <loc>https://anntsuki.github.io/tags/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2023-04-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://anntsuki.github.io/tags/%E5%90%88%E9%9B%86/</loc>
+    <lastmod>2023-04-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://anntsuki.github.io/tags/%E5%BC%80%E5%A7%8B/</loc>
     <lastmod>2023-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -226,35 +240,35 @@
 
   
   <url>
-    <loc>https://anntsuki.github.io/categories/lead/</loc>
+    <loc>https://anntsuki.github.io/categories/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2023-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://anntsuki.github.io/categories/start/</loc>
+    <loc>https://anntsuki.github.io/categories/%E6%95%99%E7%A8%8B/%E7%BD%91%E7%AB%99/</loc>
     <lastmod>2023-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://anntsuki.github.io/categories/lead/site/</loc>
+    <loc>https://anntsuki.github.io/categories/%E6%95%99%E7%A8%8B/%E7%BD%91%E7%AB%99/%E5%BC%80%E5%A7%8B/</loc>
     <lastmod>2023-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://anntsuki.github.io/categories/lead/site/start/</loc>
+    <loc>https://anntsuki.github.io/categories/%E6%95%99%E7%A8%8B/%E7%BD%91%E7%AB%99/%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2023-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://anntsuki.github.io/categories/lead/site/collect/</loc>
+    <loc>https://anntsuki.github.io/categories/%E5%BC%80%E5%A7%8B/</loc>
     <lastmod>2023-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
