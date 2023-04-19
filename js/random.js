@@ -1,1 +1,1 @@
-var posts=["2023/04/17/picturesource/","2023/04/15/webtools/","2023/04/15/world/","2023/04/15/googlecounsel/","2023/04/15/site-create-lead/"];function toRandomPost(){window.open('/'+posts[Math.floor(Math.random() * posts.length)],"_self");};
+var posts=["2023/04/15/googlecounsel/","2023/04/17/picturesource/","2023/04/15/site-create-lead/","2023/04/15/webtools/","2023/04/15/world/"];function toRandomPost(){window.open('/'+posts[Math.floor(Math.random() * posts.length)],"_self");};
