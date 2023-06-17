@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>a</title>
-      <link href="/2023/04/20/a/"/>
-      <url>/2023/04/20/a/</url>
+      <title>神经网络环境搭建</title>
+      <link href="/2023/06/17/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+      <url>/2023/06/17/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<pre><code>应该是好长时间都没搞博客了，这次是搭建pytorch，cuda用来搞swin transformer  </code></pre><p>我看的是<a href="https://blog.csdn.net/Linchpin_/article/details/128191608">Pytorch环境安装+Pycharm环境安装</a>,但是没有cuda驱动？<br>然后是<a href="[Pytorch环境安装+Pycharm环境安装](https://developer.nvidia.com/cuda-downloads?target_os=Windows&amp;target_arch=x86_64&amp;target_version=10&amp;target_type=exe_local">cuda</a>)<br>然后是apex，这篇<a href="https://blog.csdn.net/alittlebai1/article/details/107297706">win10-anaconda安装apex</a><br>然后安装好了，但是是有几个注意的<br>1.这一切都应该在anaconda prompt中安装，不能在cmd里搞，是要保证同一环境？而且装apex必须要用torch<br>2.cuda一定要选对版本，我cuda是12.1但我用11.8报错，好像说兼容高版本？还是我当时没搞对？反正尽量选对版本吧，可以删去-c pytorch，加快下载速度<br>3.anaconda中的pytorch环境用d:,再用路径，可以到当前路径下</p>]]></content>
       
       
       
