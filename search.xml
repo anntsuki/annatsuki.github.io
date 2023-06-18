@@ -4,6 +4,49 @@
   
     
     <entry>
+      <title>3060laptop搭建神经网络虚拟环境，pycharm+anaconda+pytorch+cuda1.6</title>
+      <link href="/2023/06/17/3060laptop%E6%90%AD%E5%BB%BA%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%EF%BC%8Cpycharm+anaconda+pytorch+cuda1.6/"/>
+      <url>/2023/06/17/3060laptop%E6%90%AD%E5%BB%BA%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%EF%BC%8Cpycharm+anaconda+pytorch+cuda1.6/</url>
+      
+        <content type="html"><![CDATA[<pre><code>应该是好长时间都没搞博客了，这次是搭建pytorch，cuda用来搞swin transformer  配置为rtx3060laptop，pycharm+anaconda+pytorch+cuda1.6 以下教程全没图（图很难搞） </code></pre><h2 id="总"><a href="#总" class="headerlink" title="总"></a>总</h2><p>我看的是<a href="https://blog.csdn.net/Linchpin_/article/details/128191608">Pytorch环境安装+Pycharm环境安装</a>,<br>然后是<a href="https://developer.nvidia.com/cuda-downloads?target_os=Windows&amp;target_arch=x86_64&amp;target_version=10&amp;target_type=exe_local">cuda</a><br>然后是apex，这篇<a href="https://blog.csdn.net/alittlebai1/article/details/107297706">win10-anaconda安装apex</a><br><a href="https://blog.csdn.net/m0_46406029/article/details/127781625">Swin-Transformer-Object-Detection环境搭建(最简单的安装版本)</a><br>然后安装好了，但是是有几个注意的<br>1.这一切都应该在anaconda prompt中安装，不能在cmd里搞，是要保证同一环境？而且装apex必须要用torch<br>2.cuda一定要选对版本，我cuda是12.1但我用11.8报错，好像说兼容高版本？还是我当时没搞对？反正尽量选对版本吧，可以删去-c pytorch，加快下载速度<br>3.anaconda中的pytorch环境用d:,再用路径，可以到当前路径下<br>4.apex目录下的那个看一下<br><code>pip install cxxfilt</code><br><code>pip install tqdm</code><br><code>pip install numpy</code><br><code>pip install PyYAML</code><br><code>pip install pytest</code>  </p><pre><code>好吧，没搞好，我又重新来了一遍，这样一天时间就过去了  </code></pre><p><a href="https://blog.csdn.net/lishan132/article/details/121300402">笔记本RTX3060+Win10_x86_64位搭建Pytorch深度学习本地环境</a><br><a href="https://zhuanlan.zhihu.com/p/528468287">Win10+RTX3060 laptop配置深度学习(Pytorch)环境过程</a>  </p><h2 id="1-准备"><a href="#1-准备" class="headerlink" title="1.准备"></a>1.准备</h2><p>1.需要anaconda，pycharm，visual studio，git，<br>2.anaconda prompt创建虚拟环境<code>conda create -n pytorch python==3.9</code>,环境名为pytorch<br>3.然后是<code>conda activate pytorch</code>（记得好像用管理员模式可以避免错误？现在在尝试）</p><h2 id="2-pytorch"><a href="#2-pytorch" class="headerlink" title="2.pytorch"></a>2.pytorch</h2><p>4.<code>conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.6 -c pytorch -c nvidia</code><br>下载pytorch（记得看好版本）<br>5.<del>~无语,环境转半天，是我重新搞的问题？</del>~<br>6.是网太慢了可以直接<a href="https://download.pytorch.org/whl/torch_stable.html">下文件</a><br>但是注意看好文件名，</p><p><code>cpu/torch-1.13.1%2Bcpu-cp39-cp39-win_amd64.whl</code><br><strong>cpu</strong>: This indicates that the package is for CPU-only systems.<br><strong>torch-1.13.1</strong>:the version number of the PyTorch package.<br><strong>%2Bcpu</strong>: This indicates that the package is built with CPU support.<br><strong>cp39-cp39</strong>: This indicates that the package is built for Python 3.9.<br><strong>win_amd64</strong>: This indicates that the package is built for 64-bit Windows operating systems1  </p><hr><p><code>cu117/torchvision-0.14.1%2Bcu117-cp39-cp39-win_amd64.whl</code><br><strong>cu117</strong>: This indicates that the package is built for CUDA 11.1.<br><strong>torchvision-0.14.1</strong>:the version number of the PyTorch package.<br><strong>%2Bcu117</strong>: This indicates that the package is built with CUDA support.<br><strong>cp39-cp39</strong>: This indicates that the package is built for Python 3.9.<br><strong>win_amd64</strong>: This indicates that the package is built for 64-bit Windows operating systems1<br>(这安装速度非常快，无语了)…….但是，我更无语了，<del>~安装完错了</del>~，我真是炸了<br>7.<del>~如果</del>~安装好了，cmd输入<br><code>python</code><br><code>import torch</code><br><code>torch.__version__</code><br>只要没报错和最后是True，就安装好了  </p><h2 id="3-cuda看最上面，cudnn看15"><a href="#3-cuda看最上面，cudnn看15" class="headerlink" title="3.cuda看最上面，cudnn看15"></a>3.cuda看最上面，cudnn看15</h2><h2 id="4-mmvc（万恶之源）"><a href="#4-mmvc（万恶之源）" class="headerlink" title="4.mmvc（万恶之源）"></a>4.mmvc（万恶之源）</h2><p>8.推荐的链接<br><a href="https://mmcv.readthedocs.io/zh_CN/latest/get_started/build.html">从源码编译 MMCV</a><br><a href="https://www.bilibili.com/read/cv13793763/">Windows10下面安装MMCV全过程图文详解</a> </p><h2 id="5………"><a href="#5………" class="headerlink" title="5………"></a>5………</h2><p>9.<del>~话说我写到现在pytorch都还没搞好</del>~，救命啊，真是<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>10.我让你们体验下这残酷的时间，但是，他终于开始下了<br>11.等我pytorch搞好在写………..你们懂的<br>12.挂了<br>13.在尝试<br>14.以下是我第二天写的，我已经搞好了，并且顺利的跑完了代码<br>15.cudnn应该放上面的，但是我版本搞错了，这是重新搞的<br>链接<a href="https://blog.csdn.net/weixin_47166887/article/details/124457997">关于cuda、cudnn环境配置</a><br>就按他搞就行了，但是还要注册navid之类的，非常麻烦，不过还算简单  </p><h2 id="6-apex"><a href="#6-apex" class="headerlink" title="6.apex"></a>6.apex</h2><p>14.apex上面有<br>15.然后好像没有什么了？</p><h2 id="7-提醒"><a href="#7-提醒" class="headerlink" title="7.提醒"></a>7.提醒</h2><p>16.写下注意事项：<br>1.cuda和cudann版本一定要对<br>2.这个错误看这个<a href="https://blog.csdn.net/aaatomaaa/article/details/127950887">OSError: [WinError 1455] 页面文件太小，无法完成操作。 Error loading “D:\exes\anaconda\envs\pytorch\lib\site-packages\torch\lib\shm.dll” or one of its dependencies.</a><br>3.选cuda时建议选版本低一点的，不然教程不好搞，pytorch也难，mmcv还要自己编译，更难<br>4.虚拟环境名称可以自己编的，不一定要时pytorch<br>5.只用cpu的版本我没写<br>6.暂时没了，但是排版没搞好，我有时间搞一下</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+          <category> python </category>
+          
+          <category> 神经网络 </category>
+          
+          <category> 环境 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+            <tag> 技术 </tag>
+            
+            <tag> python </tag>
+            
+            <tag> pycharm </tag>
+            
+            <tag> pytorch </tag>
+            
+            <tag> cuda </tag>
+            
+            <tag> 神经网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>datastructure</title>
       <link href="/2023/04/20/datastructure/"/>
       <url>/2023/04/20/datastructure/</url>

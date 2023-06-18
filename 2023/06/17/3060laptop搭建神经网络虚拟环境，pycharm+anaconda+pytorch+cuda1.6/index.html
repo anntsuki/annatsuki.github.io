@@ -1,0 +1,326 @@
+<!DOCTYPE html><html lang="zh-CN"><head><link rel="stylesheet" type="text/css" href="/css/nerd.css"><link rel="stylesheet" type="text/css" href="/css/loadingcar.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper-marcus/lib/skills.min.css"><link rel="preload" as="style" type="text/css" href="/css/nerd.css"><link rel="preload" as="font" type="font/ttf" href="/fonts/font.woff2" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-ui@2.15.6/packages/theme-chalk/lib/index.css"><script async="" data-pjax="" src="/js/custom.js"></script><script src="/js/random.js"></script><script async="" src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script><script async="" src="https://cdn.jsdelivr.net/npm/element-ui@2.15.6/lib/index.js"></script><script async="" data-pjax="" src="/js/linksbar.js"></script><script async="" src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/carousel-touch.min.js"></script><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>3060laptop搭建神经网络虚拟环境，pycharm+anaconda+pytorch+cuda1.6 | annafuri</title><meta name="author" content="anna"><meta name="copyright" content="anna"><meta name="format-detection" content="telephone=no"><meta name="theme-color"><meta name="description" content="应该是好长时间都没搞博客了，这次是搭建pytorch，cuda用来搞swin transformer   配置为rtx3060laptop，pycharm+anaconda+pytorch+cuda1.6  以下教程全没图（图很难搞）  总我看的是Pytorch环境安装+Pycharm环境安装,然后是cuda然后是apex，这篇win10-anaconda安装apexSwin-Transforme">
+<meta property="og:type" content="article">
+<meta property="og:title" content="3060laptop搭建神经网络虚拟环境，pycharm+anaconda+pytorch+cuda1.6">
+<meta property="og:url" content="https://anntsuki.github.io/2023/06/17/3060laptop%E6%90%AD%E5%BB%BA%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%EF%BC%8Cpycharm+anaconda+pytorch+cuda1.6/index.html">
+<meta property="og:site_name" content="annafuri">
+<meta property="og:description" content="应该是好长时间都没搞博客了，这次是搭建pytorch，cuda用来搞swin transformer   配置为rtx3060laptop，pycharm+anaconda+pytorch+cuda1.6  以下教程全没图（图很难搞）  总我看的是Pytorch环境安装+Pycharm环境安装,然后是cuda然后是apex，这篇win10-anaconda安装apexSwin-Transforme">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://anntsuki.github.io/img/3.jpg">
+<meta property="article:published_time" content="2023-06-17T04:30:36.000Z">
+<meta property="article:modified_time" content="2023-06-18T08:52:43.424Z">
+<meta property="article:author" content="anna">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="技术">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="pycharm">
+<meta property="article:tag" content="pytorch">
+<meta property="article:tag" content="cuda">
+<meta property="article:tag" content="神经网络">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://anntsuki.github.io/img/3.jpg"><link rel="shortcut icon" href="https://anntsuki.github.io/img/avatar.png"><link rel="canonical" href="https://anntsuki.github.io/2023/06/17/3060laptop%E6%90%AD%E5%BB%BA%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%EF%BC%8Cpycharm+anaconda+pytorch+cuda1.6/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.bilicdn.tk/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.bilicdn.tk/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":300},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.bilicdn.tk/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.bilicdn.tk/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '3060laptop搭建神经网络虚拟环境，pycharm+anaconda+pytorch+cuda1.6',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2023-06-18 16:52:43'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div></div></div><script async="async">var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+setTimeout(function(){preloader.endLoading();}, 3600);
+document.getElementById('loading-box').addEventListener('click',()=> {preloader.endLoading()})</script><link rel="stylesheet" href="/css/loading.css"/><script src="https://cdn.bilicdn.tk/npm/pace-js/pace.min.js"></script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="menus_items"><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><span> 本站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/"><i class="fa-fw fas fa-house-user"></i><span> 首页</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-box-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><span> 我的</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/cc/"><i class="fa-fw fab fa-creative-commons"></i><span> 协议</span></a></li><li><a class="site-page child" href="/2023/dimension"><i class="fa-fw fas fa-wand-magic-sparkles"></i><span> 主题</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li><li><a class="site-page child" href="https://anntsuki.github.io"><i class="fa-fw fas fa-house-user"></i><span> 主页</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://anntsuki.github.io/img/3.jpg')"><nav id="nav"><div id="toggle-menu"><a class="site-page"><i class="fas fa-grip-vertical"></i></a></div><span id="blog_name"><a id="site-name" href="/"><img src="https://img1.tianli0.top/%E9%A6%96%E9%A1%B5.png" width="50" height="50"/><div class="title">annafuri</div><i class="fa-solid fa-house"></i></a></span><div class="mask-name-container"><center id="name-container"><a id="page-name" onclick="btf.scrollToDest(0,500)"></a></center><div class="nav-button" id="nav-totop"><a class="totopbtn"><i class="fas fa-arrow-up"></i><span id="percent" onclick="btf.scrollToDest(0,500)">0</span></a></div></div><div id="menus"><div class="nav-button" id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="nav-button console-button"><a class="link" onclick="heo.showConsole()"><i class="fas fa-circle-plus fa-xl fa-beat"></i></a></div><div class="menus_items"><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><span> 本站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/"><i class="fa-fw fas fa-house-user"></i><span> 首页</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-box-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><span> 我的</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/cc/"><i class="fa-fw fab fa-creative-commons"></i><span> 协议</span></a></li><li><a class="site-page child" href="/2023/dimension"><i class="fa-fw fas fa-wand-magic-sparkles"></i><span> 主题</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li><li><a class="site-page child" href="https://anntsuki.github.io"><i class="fa-fw fas fa-house-user"></i><span> 主页</span></a></li></ul></div></div></div></nav><div id="post-info"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a><a class="post-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a><a class="post-meta__tags" href="/tags/python/">python</a><a class="post-meta__tags" href="/tags/pycharm/">pycharm</a><a class="post-meta__tags" href="/tags/pytorch/">pytorch</a><a class="post-meta__tags" href="/tags/cuda/">cuda</a><a class="post-meta__tags" href="/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">神经网络</a></div><h1 class="post-title">3060laptop搭建神经网络虚拟环境，pycharm+anaconda+pytorch+cuda1.6</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-06-17T04:30:36.000Z" title="发表于 2023-06-17 12:30:36">2023-06-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-18T08:52:43.424Z" title="更新于 2023-06-18 16:52:43">2023-06-18</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">941</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="3060laptop搭建神经网络虚拟环境，pycharm+anaconda+pytorch+cuda1.6"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><div id="console"><div class="close-btn" onclick="heo.hideConsole()"><i class="fas fa-circle-xmark"></i></div><div class="console-webinfo"><div class="console-webinfo-card"><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line fa-bounce"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name"><i class="fas fa-folder-open fa-beat"></i><div class="text">文章总数</div></div><div class="item-count">7</div></div><div class="webinfo-item"><div class="item-name"><i class="fas fa-clock fa-shake"></i><div class="text">建站天数</div></div><div class="item-count" id="runtimeshow" data-publishDate="2023-04-13T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name"><i class="fas fa-pen-to-square fa-beat"></i><div class="text">全站字数</div></div><div class="item-count">2k</div></div><div class="webinfo-item"><div class="item-name"><i class="fas fa-upload fa-shake"></i><div class="text">最后更新</div></div><div class="item-count" id="last-push-date" data-lastPushDate="2023-06-18T08:53:01.623Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" onclick="toRandomPost()" title="随机文章"><i class="fas fa-shuffle fa-beat" style="font-size: 1rem;"></i></a></div><div class="console-btn-item"><a class="assist-btn" target="_blank" rel="noopener" href="https://travellings.cn/go.html" title="友链接力"><i class="fas fa-bus fa-beat" style="font-size: 1rem;"></i></a></div><div class="console-btn-item"><a class="assist-btn" onclick="btf.scrollToDest(0,500), heo.hideConsole()"><i class="fas fa-arrows-up-to-line fa-beat" style="font-size: 1rem;"></i></a></div></div><div class="console-mask"></div></div><main class="layout" id="content-inner"><div id="post"><div class="dimension-toc"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB"><span class="toc-number">1.</span> <span class="toc-text">总</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%87%86%E5%A4%87"><span class="toc-number">2.</span> <span class="toc-text">1.准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-pytorch"><span class="toc-number">3.</span> <span class="toc-text">2.pytorch</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-cuda%E7%9C%8B%E6%9C%80%E4%B8%8A%E9%9D%A2%EF%BC%8Ccudnn%E7%9C%8B15"><span class="toc-number">4.</span> <span class="toc-text">3.cuda看最上面，cudnn看15</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-mmvc%EF%BC%88%E4%B8%87%E6%81%B6%E4%B9%8B%E6%BA%90%EF%BC%89"><span class="toc-number">5.</span> <span class="toc-text">4.mmvc（万恶之源）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E2%80%A6%E2%80%A6%E2%80%A6"><span class="toc-number">6.</span> <span class="toc-text">5………</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-apex"><span class="toc-number">7.</span> <span class="toc-text">6.apex</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E6%8F%90%E9%86%92"><span class="toc-number">8.</span> <span class="toc-text">7.提醒</span></a></li></ol></div></div></div><article class="post-content" id="article-container"><pre><code>应该是好长时间都没搞博客了，这次是搭建pytorch，cuda用来搞swin transformer  
+配置为rtx3060laptop，pycharm+anaconda+pytorch+cuda1.6 
+以下教程全没图（图很难搞） 
+</code></pre><h2 id="总"><a href="#总" class="headerlink" title="总"></a>总</h2><p>我看的是<a target="_blank" rel="noopener" href="https://blog.csdn.net/Linchpin_/article/details/128191608">Pytorch环境安装+Pycharm环境安装</a>,<br>然后是<a target="_blank" rel="noopener" href="https://developer.nvidia.com/cuda-downloads?target_os=Windows&amp;target_arch=x86_64&amp;target_version=10&amp;target_type=exe_local">cuda</a><br>然后是apex，这篇<a target="_blank" rel="noopener" href="https://blog.csdn.net/alittlebai1/article/details/107297706">win10-anaconda安装apex</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46406029/article/details/127781625">Swin-Transformer-Object-Detection环境搭建(最简单的安装版本)</a><br>然后安装好了，但是是有几个注意的<br>1.这一切都应该在anaconda prompt中安装，不能在cmd里搞，是要保证同一环境？而且装apex必须要用torch<br>2.cuda一定要选对版本，我cuda是12.1但我用11.8报错，好像说兼容高版本？还是我当时没搞对？反正尽量选对版本吧，可以删去-c pytorch，加快下载速度<br>3.anaconda中的pytorch环境用d:,再用路径，可以到当前路径下<br>4.apex目录下的那个看一下<br><code>pip install cxxfilt</code><br><code>pip install tqdm</code><br><code>pip install numpy</code><br><code>pip install PyYAML</code><br><code>pip install pytest</code>  </p>
+<pre><code>好吧，没搞好，我又重新来了一遍，这样一天时间就过去了  
+</code></pre><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lishan132/article/details/121300402">笔记本RTX3060+Win10_x86_64位搭建Pytorch深度学习本地环境</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/528468287">Win10+RTX3060 laptop配置深度学习(Pytorch)环境过程</a>  </p>
+<h2 id="1-准备"><a href="#1-准备" class="headerlink" title="1.准备"></a>1.准备</h2><p>1.需要anaconda，pycharm，visual studio，git，<br>2.anaconda prompt创建虚拟环境<code>conda create -n pytorch python==3.9</code>,环境名为pytorch<br>3.然后是<code>conda activate pytorch</code>（记得好像用管理员模式可以避免错误？现在在尝试）</p>
+<h2 id="2-pytorch"><a href="#2-pytorch" class="headerlink" title="2.pytorch"></a>2.pytorch</h2><p>4.<code>conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.6 -c pytorch -c nvidia</code><br>下载pytorch（记得看好版本）<br>5.<del>~无语,环境转半天，是我重新搞的问题？</del>~<br>6.是网太慢了可以直接<a target="_blank" rel="noopener" href="https://download.pytorch.org/whl/torch_stable.html">下文件</a><br>但是注意看好文件名，</p>
+<p><code>cpu/torch-1.13.1%2Bcpu-cp39-cp39-win_amd64.whl</code><br><strong>cpu</strong>: This indicates that the package is for CPU-only systems.<br><strong>torch-1.13.1</strong>:the version number of the PyTorch package.<br><strong>%2Bcpu</strong>: This indicates that the package is built with CPU support.<br><strong>cp39-cp39</strong>: This indicates that the package is built for Python 3.9.<br><strong>win_amd64</strong>: This indicates that the package is built for 64-bit Windows operating systems1  </p>
+<hr>
+<p><code>cu117/torchvision-0.14.1%2Bcu117-cp39-cp39-win_amd64.whl</code><br><strong>cu117</strong>: This indicates that the package is built for CUDA 11.1.<br><strong>torchvision-0.14.1</strong>:the version number of the PyTorch package.<br><strong>%2Bcu117</strong>: This indicates that the package is built with CUDA support.<br><strong>cp39-cp39</strong>: This indicates that the package is built for Python 3.9.<br><strong>win_amd64</strong>: This indicates that the package is built for 64-bit Windows operating systems1<br>(这安装速度非常快，无语了)…….但是，我更无语了，<del>~安装完错了</del>~，我真是炸了<br>7.<del>~如果</del>~安装好了，cmd输入<br><code>python</code><br><code>import torch</code><br><code>torch.__version__</code><br>只要没报错和最后是True，就安装好了  </p>
+<h2 id="3-cuda看最上面，cudnn看15"><a href="#3-cuda看最上面，cudnn看15" class="headerlink" title="3.cuda看最上面，cudnn看15"></a>3.cuda看最上面，cudnn看15</h2><h2 id="4-mmvc（万恶之源）"><a href="#4-mmvc（万恶之源）" class="headerlink" title="4.mmvc（万恶之源）"></a>4.mmvc（万恶之源）</h2><p>8.推荐的链接<br><a target="_blank" rel="noopener" href="https://mmcv.readthedocs.io/zh_CN/latest/get_started/build.html">从源码编译 MMCV</a><br><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv13793763/">Windows10下面安装MMCV全过程图文详解</a> </p>
+<h2 id="5………"><a href="#5………" class="headerlink" title="5………"></a>5………</h2><p>9.<del>~话说我写到现在pytorch都还没搞好</del>~，救命啊，真是<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>10.我让你们体验下这残酷的时间，但是，他终于开始下了<br>11.等我pytorch搞好在写………..你们懂的<br>12.挂了<br>13.在尝试<br>14.以下是我第二天写的，我已经搞好了，并且顺利的跑完了代码<br>15.cudnn应该放上面的，但是我版本搞错了，这是重新搞的<br>链接<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_47166887/article/details/124457997">关于cuda、cudnn环境配置</a><br>就按他搞就行了，但是还要注册navid之类的，非常麻烦，不过还算简单  </p>
+<h2 id="6-apex"><a href="#6-apex" class="headerlink" title="6.apex"></a>6.apex</h2><p>14.apex上面有<br>15.然后好像没有什么了？</p>
+<h2 id="7-提醒"><a href="#7-提醒" class="headerlink" title="7.提醒"></a>7.提醒</h2><p>16.写下注意事项：<br>1.cuda和cudann版本一定要对<br>2.这个错误看这个<a target="_blank" rel="noopener" href="https://blog.csdn.net/aaatomaaa/article/details/127950887">OSError: [WinError 1455] 页面文件太小，无法完成操作。 Error loading “D:\exes\anaconda\envs\pytorch\lib\site-packages\torch\lib\shm.dll” or one of its dependencies.</a><br>3.选cuda时建议选版本低一点的，不然教程不好搞，pytorch也难，mmcv还要自己编译，更难<br>4.虚拟环境名称可以自己编的，不一定要时pytorch<br>5.只用cpu的版本我没写<br>6.暂时没了，但是排版没搞好，我有时间搞一下</p>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a><a class="post-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a><a class="post-meta__tags" href="/tags/python/">python</a><a class="post-meta__tags" href="/tags/pycharm/">pycharm</a><a class="post-meta__tags" href="/tags/pytorch/">pytorch</a><a class="post-meta__tags" href="/tags/cuda/">cuda</a><a class="post-meta__tags" href="/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">神经网络</a></div><div class="post_share"><div class="social-share" data-image="https://anntsuki.github.io/img/3.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.bilicdn.tk/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.bilicdn.tk/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/04/20/datastructure/"><img class="next-cover" src="https://anntsuki.github.io/img/13.jpg" onerror="onerror=null;src='https://ezgx.site/img/404.png'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">datastructure</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Waline</span><span class="switch-btn"></span><span class="second-comment">Giscus</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div><div><div id="giscus-wrap"></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer_deal"><img class="footer_mini_logo entered loading" style="border-radius:50%" src="/img/avatar.png" onclick="btf.scrollToDest(0,500)" title="返回顶部"/></div><div id="Jay-footer"><div class="footer-group"><h3 class="footer-title">直达</h3><div class="footer-links"><a class="footer-item" href="https://anntsuki.github.io">个人主页</a><a class="footer-item" href="/about/">关于</a><a class="footer-item" href="/link/">友链</a><a class="footer-item" href="javascript:toRandomPost()">随机文章</a></div></div><div class="footer-group"><h3 class="footer-title">标签</h3><div class="footer-links"><a class="footer-item" href="/tags/%E6%95%99%E7%A8%8B/">教程</a><a class="footer-item" href="javascript:void(0)">占位</a><a class="footer-item" href="javascript:void(0)">占位</a><a class="footer-item" href="/categories/%E7%94%9F%E6%B4%BB/">生活记录</a></div></div><div class="footer-group"><h3 class="footer-title">我的</h3><div class="footer-links"><a class="footer-item" href="/about/">关于</a><a class="footer-item" href="/archives/">归档</a><a class="footer-item" href="/tags/">标签</a><a class="footer-item" href="/categories/">分类</a></div></div><div class="footer-group"><h3 class="footer-title">协议</h3><div class="footer-links"><a class="footer-item" href="/cc/">版权协议</a><a class="footer-item" target="_blank" rel="noopener" href="https://github.com/Ezgx/hexo-theme-dimension/blob/main/LICENSE">主题协议</a><a class="footer-item" href="javascript:void(0)">占位</a><a class="footer-item" href="javascript:void(0)">占位</a></div></div></div><div id="footer-banner"><div class="footer-banner-links"><div class="footer-banner-left"><div class="footer-banner-left"><div id="footer-banner-tips">2023 ©annafuri</div></div></div><div class="footer-banner-right"><a class="footer-banner-link" target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" title="Hexo">框架：Hexo</a><a class="footer-banner-link">|</a><a class="footer-banner-link" href="/2023/dimension" title="theme">主题：dimension</a><a class="footer-banner-link">|</a><a class="footer-banner-link" href="/about/" title="about">关于</a><a class="footer-banner-link">|</a><a class="footer-banner-link cc" href="/cc/" title="cc协议"><i class="fab fa-creative-commons"></i><span>协议。</span></a></div></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.bilicdn.tk/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.bilicdn.tk/npm/instant.page/instantpage.min.js" type="module"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadWaline () {
+  function insertCSS () {
+    const link = document.createElement("link")
+    link.rel = "stylesheet"
+    link.href = "https://cdn.bilicdn.tk/npm/@waline/client/dist/waline.min.css"
+    document.head.appendChild(link)
+  }
+
+  function initWaline () {
+    const waline = Waline.init(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://talktwo-c0mgux56a-annafuri.vercel.app/',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: false,
+    }, null))
+  }
+
+  if (typeof Waline === 'function') initWaline()
+  else {
+    insertCSS()
+    getScript('https://cdn.bilicdn.tk/npm/@waline/client/dist/waline.min.js').then(initWaline)
+  }
+}
+
+if ('Waline' === 'Waline' || !false) {
+  if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+  else setTimeout(loadWaline, 0)
+} else {
+  function loadOtherComment () {
+    loadWaline()
+  }
+}</script><script>function loadGiscus () {
+  let nowTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'
+
+  const config = Object.assign({
+    src: 'https://giscus.app/client.js',
+    'data-repo': 'anntsuki/pic-img',
+    'data-repo-id': 'R_kgDOJW06MA',
+    'data-category-id': 'DIC_kwDOJW06MM4CV094',
+    'data-mapping': 'pathname',
+    'data-theme': nowTheme,
+    'data-reactions-enabled': '1',
+    crossorigin: 'anonymous',
+    async: true
+  },null)
+
+  let ele = document.createElement('script')
+  for (let key in config) {
+    ele.setAttribute(key, config[key])
+  }
+  document.getElementById('giscus-wrap').insertAdjacentElement('afterbegin',ele)
+}
+
+function changeGiscusTheme () {
+  const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'
+
+  function sendMessage(message) {
+    const iframe = document.querySelector('iframe.giscus-frame');
+    if (!iframe) return;
+    iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+  }
+
+  sendMessage({
+    setConfig: {
+      theme: theme
+    }
+  });
+}
+
+if ('Waline' === 'Giscus' || !false) {
+  if (false) btf.loadComment(document.getElementById('giscus-wrap'), loadGiscus)
+  else loadGiscus()
+} else {
+  function loadOtherComment () {
+    loadGiscus()
+  }
+}</script></div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.bilicdn.tk/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script src="https://cdn.bilicdn.tk/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.bilicdn.tk/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="true" data-text="欢迎来到,ananfuri的,博客" data-fontsize="16px" data-random="false" async="async"></script><script src="https://cdn.bilicdn.tk/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["link[rel=\"canonical\"]","meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="hometop.js"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><span id="fps"></span></body></html>
