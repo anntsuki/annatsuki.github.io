@@ -4,6 +4,83 @@
   
     
     <entry>
+      <title>magpie</title>
+      <link href="/2023/07/08/magpie/"/>
+      <url>/2023/07/08/magpie/</url>
+      
+        <content type="html"><![CDATA[<p>这可以让低分辨率在高分辨率屏幕上看起来也很清楚<br>注意<br>1.要在属性里面兼容性，把高dpi调好<br>2.要用窗口，原始分辨率<br>3.如果有问题更新显卡和把配置多调下<br>我是3060+2k，用的是anime4k的几个选项，我给几个网址<br><a href="https://www.tieba.com/p/8092832729?pn=1">贴吧的</a><br><a href="https://github.com/Blinue/Magpie/discussions/364">github官方</a><br><a href="https://www.cnblogs.com/eslzzyl/p/17255585.html">另一个参考</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>记一次换系统盘经历，用的是diskgenius</title>
+      <link href="/2023/07/08/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%8D%A2%E7%B3%BB%E7%BB%9F%E7%9B%98%E7%BB%8F%E5%8E%86%EF%BC%8C%E7%94%A8%E7%9A%84%E6%98%AFdiskgenius/"/>
+      <url>/2023/07/08/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%8D%A2%E7%B3%BB%E7%BB%9F%E7%9B%98%E7%BB%8F%E5%8E%86%EF%BC%8C%E7%94%A8%E7%9A%84%E6%98%AFdiskgenius/</url>
+      
+        <content type="html"><![CDATA[<p>虽说也没啥，但我是搞了一下午，简单来说就是<strong>拷贝系统盘时要先把注册表里面有一个要删掉</strong>，然后就可以继续了，别人都是出问题之后搞的，但是我用他们那方法没搞好，然后就用我上面说的，好了。<br>至于要删掉啥我现在也忘记了，等我有时间去看看，再来补  </p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 电脑 </tag>
+            
+            <tag> diskgenius </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>神经网络相关算法</title>
+      <link href="/2023/06/18/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%AE%97%E6%B3%95/"/>
+      <url>/2023/06/18/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%AE%97%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<pre><code>下面是相关算法</code></pre><h2 id="1-transformer"><a href="#1-transformer" class="headerlink" title="1.transformer"></a>1.transformer</h2><p><a href="https://github.com/milesial/Pytorch-UNet">githrb官方</a><br><a href="https://blog.csdn.net/hehuaiyuyu/article/details/106307748">csdn数据集等</a></p><h2 id="2-u-net"><a href="#2-u-net" class="headerlink" title="2.u-net"></a>2.u-net</h2><p><a href="https://github.com/milesial/Pytorch-UNet">github官方</a><br><a href="https://github.com/bubbliiiing/unet-pytorch">github另一个可以训练的</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+          <category> python </category>
+          
+          <category> 神经网络 </category>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> pycharm </tag>
+            
+            <tag> pytorch </tag>
+            
+            <tag> cuda </tag>
+            
+            <tag> 神经网络 </tag>
+            
+            <tag> 教程 </tag>
+            
+            <tag> 技术 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>3060laptop搭建神经网络虚拟环境，pycharm+anaconda+pytorch+cuda1.6</title>
       <link href="/2023/06/17/3060laptop%E6%90%AD%E5%BB%BA%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%EF%BC%8Cpycharm+anaconda+pytorch+cuda1.6/"/>
       <url>/2023/06/17/3060laptop%E6%90%AD%E5%BB%BA%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%EF%BC%8Cpycharm+anaconda+pytorch+cuda1.6/</url>
@@ -26,10 +103,6 @@
       
         <tags>
             
-            <tag> 教程 </tag>
-            
-            <tag> 技术 </tag>
-            
             <tag> python </tag>
             
             <tag> pycharm </tag>
@@ -39,6 +112,10 @@
             <tag> cuda </tag>
             
             <tag> 神经网络 </tag>
+            
+            <tag> 教程 </tag>
+            
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -72,9 +149,9 @@
             
             <tag> 教程 </tag>
             
-            <tag> 网站 </tag>
-            
             <tag> 技术 </tag>
+            
+            <tag> 网站 </tag>
             
             <tag> 图床 </tag>
             
@@ -105,9 +182,9 @@
             
             <tag> 教程 </tag>
             
-            <tag> 网站 </tag>
-            
             <tag> 技术 </tag>
+            
+            <tag> 网站 </tag>
             
             <tag> 谷歌搜录 </tag>
             
@@ -140,9 +217,9 @@
             
             <tag> 教程 </tag>
             
-            <tag> 网站 </tag>
-            
             <tag> 技术 </tag>
+            
+            <tag> 网站 </tag>
             
             <tag> 合集 </tag>
             
@@ -175,9 +252,9 @@
             
             <tag> 教程 </tag>
             
-            <tag> 网站 </tag>
-            
             <tag> 技术 </tag>
+            
+            <tag> 网站 </tag>
             
             <tag> 网站配置 </tag>
             
