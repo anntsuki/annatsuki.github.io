@@ -6,7 +6,7 @@ document.addEventListener('visibilitychange', function(){
         document.title = '(っ °Д °;)っ 访问的页面不存在了';
         clearTimeout(titleTime);
     }else{
-        document.title = '噫又好啦 ';
+        document.title = 'o(〃＾▽＾〃)o ';
         titleTime = setTimeout(function() {
             document.title = OriginTitile;
         }, 3000); // 3秒后恢复原标题
